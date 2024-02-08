@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# DONE: 1. (3 pts)
 #
 #   Write a function called color_picker() that prints out a message to a user.
 #
@@ -16,6 +16,23 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+def color_picker():
+    color = input("Enter a color: ")
+    match color.lower():
+        case "red":
+            print("You have picked red successfully.")
+        case "blue":
+            print("You have picked blue successfully.")
+        case "orange":
+            print("You have picked orange successfully.")
+        case "purple":
+            print("You have picked purple successfully.")
+        case "green":
+            print("You have picked green successfully.")
+        case _:
+            print("Unknown Color!")
+color_picker()
 
 ###############################################################################
 # TODO: 2. (3 pts)
@@ -36,3 +53,20 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+def grade():
+    score = input("Enter the percentage score as a decimal: ")
+    match score:
+        case A:
+            print("Your letter score is A.")
+        case B:
+            print("Your letter score is B.")
+        case range(0.7, 0.799999):
+            print("Your letter score is C.")
+        case range(0.6, 0.699999):
+            print("Your letter score is D.")
+        case range(0.5, 0.599999):
+            print("Your letter score is F.")
+        case _:
+            print("Invalid Score!")
+grade()
