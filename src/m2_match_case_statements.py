@@ -35,7 +35,7 @@ def color_picker():
 color_picker()
 
 ###############################################################################
-# TODO: 2. (3 pts)
+# DONE: 2. (3 pts)
 #
 #   Write a function called grade() that tells a student what letter grade they
 #   got on an assignment based on the percentage they indicate.
@@ -56,16 +56,17 @@ color_picker()
 
 def grade():
     score = input("Enter the percentage score as a decimal: ")
+    score = float(score)
     match score:
-        case A:
+        case _ if 1 >= score >= 0.9:
             print("Your letter score is A.")
-        case B:
+        case _ if 0.9 > score >= 0.8:
             print("Your letter score is B.")
-        case range(0.7, 0.799999):
+        case _ if 0.8 > score >= 0.7:
             print("Your letter score is C.")
-        case range(0.6, 0.699999):
+        case _ if 0.7 > score >= 0.6:
             print("Your letter score is D.")
-        case range(0.5, 0.599999):
+        case _ if 0.6 > score >= 0.5:
             print("Your letter score is F.")
         case _:
             print("Invalid Score!")
